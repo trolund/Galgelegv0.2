@@ -31,6 +31,7 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
     public String synligtord;
     public ImageView img;
     public Data data;
+    public TextView liv;
 
 
     private final Button[] btnABCArray = new Button[30];
@@ -52,9 +53,11 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
         Showord = (TextView) findViewById(R.id.textView);
         Showord.setText(synligtord);
 
-        time = (Chronometer) findViewById(R.id.chronometer2);
+        time = (Chronometer) findViewById(R.id.chronometer3);
         time.start();
 
+        liv = (TextView) findViewById(R.id.livantal);
+        liv.setText("6");
 
         menuBut = (Button) findViewById(R.id.menu);
         menuBut.setOnClickListener(this);
@@ -86,27 +89,25 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
 
             default:
 
-                if (logik.erSpilletTabt()){
+                String bogstav = "" +((Button) view).getText().toString().toLowerCase().charAt(0);
+                if(bogstav.equals("?")){
+                    bogstav = Hint();
+                }
+
+                logik.gætBogstav(bogstav);
+                Showord.setText(logik.getSynligtOrd());
+                liv.setText("" + (6-logik.getAntalForkerteBogstaver()));
+                setIMG();
+                view.setEnabled(false);
+
+
+                if (logik.getAntalForkerteBogstaver() == 6){
                     time.stop();
                     deActivetABCBut();
                     Intent losserIntent = new Intent(gameActivity.this, LoseActivity.class);
                     losserIntent.putExtra("ord", logik.getOrdet());
                     gameActivity.this.startActivity(losserIntent);
-                }
-
-
-                String bogstav = "" +((Button) view).getText().toString().toLowerCase().charAt(0);
-                if(bogstav.equals("?")){
-                   bogstav = Hint();
-                    }
-
-                logik.gætBogstav(bogstav);
-                Showord.setText(logik.getSynligtOrd());
-                setIMG();
-                view.setEnabled(false);
-
-
-                if(logik.erSpilletVundet()){
+                } else if(logik.erSpilletVundet()){
                     time.stop();
                     deActivetABCBut();
                     Intent winnerIntent = new Intent(gameActivity.this, WinningActivity.class);
@@ -119,7 +120,6 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
                     dao.save(getBaseContext(), new HighscoreDTO(Score, logik.getOrdet(), new Date()));
                     gameActivity.this.startActivity(winnerIntent);
                 }
-
                 break;
         }
     }

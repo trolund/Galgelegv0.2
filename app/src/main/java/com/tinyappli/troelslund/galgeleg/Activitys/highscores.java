@@ -45,7 +45,7 @@ public class highscores extends AppCompatActivity {
 
         if(daoList == null){
             daoList = new ArrayList<HighscoreDTO>();
-            daoList.add(new HighscoreDTO("0", "Ingen ord er gemt endnu", new Date()));
+           // daoList.add(new HighscoreDTO("0", "Ingen ord er gemt endnu", new Date()));
         }
 
         Collections.sort(daoList, new Comparator<HighscoreDTO>() {
