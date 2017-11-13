@@ -43,13 +43,16 @@ public class Data extends AsyncTask<String,String, List<String>> {
         if((status == 1 || status == 2) && downloadstatus){
             System.out.println("downloadstatus = " + downloadstatus);
             execute();
-        } else if(status == 3){
+        } else if(status == 3 && downloadstatus){
             wordList = load();
             if (wordList == null || wordList.size() < 1){
                 wordList = new ArrayList<String>();
                 wordList.add("Ord");
                 Toast toast = Toast.makeText(context, "Der er ingen ord i hukommelsen, og kan ikke hente fra " + URL, Toast.LENGTH_SHORT);
                 toast.show();
+            } else{
+                logik.setMuligeOrd(wordList);
+                logik.nulstil();
             }
         }
     }
@@ -78,7 +81,7 @@ public class Data extends AsyncTask<String,String, List<String>> {
         if(strings == null || strings.size() < 1){
             wordList = load();
 
-            Toast toast2 = Toast.makeText(context, "Der blev ikke hentet fra " + URL + "men fra memory!", Toast.LENGTH_SHORT);
+            Toast toast2 = Toast.makeText(context, "Der blev ikke hentet fra " + URL + ", men fra memory!", Toast.LENGTH_SHORT);
             toast2.show();
 
             if (wordList == null || wordList.size() < 1){
