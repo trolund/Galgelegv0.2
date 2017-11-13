@@ -3,21 +3,14 @@ package com.tinyappli.troelslund.galgeleg.Activitys;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.tinyappli.troelslund.galgeleg.Logik.Galgelogik;
 import com.tinyappli.troelslund.galgeleg.R;
-import com.tinyappli.troelslund.galgeleg.data.DAO.HighscoreDAO;
-import com.tinyappli.troelslund.galgeleg.data.DAO.WordListDAO;
-import com.tinyappli.troelslund.galgeleg.data.DTO.HighscoreDTO;
 import com.tinyappli.troelslund.galgeleg.data.Data;
-
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 

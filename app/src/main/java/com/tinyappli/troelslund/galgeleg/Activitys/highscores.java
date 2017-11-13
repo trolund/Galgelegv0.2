@@ -1,26 +1,19 @@
 package com.tinyappli.troelslund.galgeleg.Activitys;
 
-import android.database.DataSetObserver;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.tinyappli.troelslund.galgeleg.ListAdapter;
+import com.tinyappli.troelslund.galgeleg.Adapters.ListAdapter;
 import com.tinyappli.troelslund.galgeleg.R;
 import com.tinyappli.troelslund.galgeleg.data.DAO.HighscoreDAO;
 import com.tinyappli.troelslund.galgeleg.data.DAO.IHighscoreDAO;
 import com.tinyappli.troelslund.galgeleg.data.DTO.HighscoreDTO;
-import com.tinyappli.troelslund.galgeleg.data.exceptions.DataException;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 
 public class highscores extends AppCompatActivity {

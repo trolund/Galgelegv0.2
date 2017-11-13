@@ -68,6 +68,10 @@ public class Galgelogik {
     spilletErTabt = false;
     ordet = muligeOrd.get(new Random().nextInt(muligeOrd.size()));
     opdaterSynligtOrd();
+
+    if(synligtOrd.length() <= 1){ // lille tilføjelse for ikke at have ord med et bogstav.
+      nulstil();
+    }
   }
 
 

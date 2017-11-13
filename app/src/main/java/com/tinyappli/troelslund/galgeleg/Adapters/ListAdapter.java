@@ -1,4 +1,4 @@
-package com.tinyappli.troelslund.galgeleg;
+package com.tinyappli.troelslund.galgeleg.Adapters;
 
 import android.content.ClipData;
 import android.content.Context;

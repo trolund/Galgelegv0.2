@@ -11,12 +11,9 @@ import android.widget.TextView;
 
 import com.tinyappli.troelslund.galgeleg.Logik.Galgelogik;
 import com.tinyappli.troelslund.galgeleg.data.DAO.HighscoreDAO;
-import com.tinyappli.troelslund.galgeleg.data.DAO.WordListDAO;
 import com.tinyappli.troelslund.galgeleg.data.DTO.HighscoreDTO;
 import com.tinyappli.troelslund.galgeleg.R;
-import com.tinyappli.troelslund.galgeleg.data.Data;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
