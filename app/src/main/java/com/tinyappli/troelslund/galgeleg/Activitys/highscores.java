@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.tinyappli.troelslund.galgeleg.ListAdapter;
 import com.tinyappli.troelslund.galgeleg.R;
@@ -46,6 +47,8 @@ public class highscores extends AppCompatActivity {
         if(daoList == null){
             daoList = new ArrayList<HighscoreDTO>();
            // daoList.add(new HighscoreDTO("0", "Ingen ord er gemt endnu", new Date()));
+            Toast toast = Toast.makeText(getBaseContext(), "Ingen ord er gemt endnu", Toast.LENGTH_LONG);
+            toast.show();
         }
 
         Collections.sort(daoList, new Comparator<HighscoreDTO>() {

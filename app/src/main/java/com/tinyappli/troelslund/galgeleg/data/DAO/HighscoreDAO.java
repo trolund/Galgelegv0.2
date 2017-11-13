@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static android.content.Context.MODE_PRIVATE;
-import static com.tinyappli.troelslund.galgeleg.Activitys.MainActivity.PREF_FILE;
 
 /**
  * Created by troelslund on 09/11/2017.
@@ -24,6 +23,8 @@ public class HighscoreDAO implements IHighscoreDAO {
     private static HighscoreDAO singleton = new HighscoreDAO();
 
     private final String MEMORY_KEY ="highscore";
+
+    public static final String PREF_FILE = "preferences";
 
     private HighscoreDAO() {
     }

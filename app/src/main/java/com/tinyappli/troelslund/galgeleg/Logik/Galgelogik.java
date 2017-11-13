@@ -23,6 +23,9 @@ public class Galgelogik {
   private boolean spilletErVundet;
   private boolean spilletErTabt;
 
+  public ArrayList<String> getMuligeOrd() {
+    return muligeOrd;
+  }
 
   public ArrayList<String> getBrugteBogstaver() {
     return brugteBogstaver;

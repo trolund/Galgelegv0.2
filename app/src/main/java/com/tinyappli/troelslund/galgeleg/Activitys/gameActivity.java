@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.tinyappli.troelslund.galgeleg.Logik.Galgelogik;
 import com.tinyappli.troelslund.galgeleg.data.DAO.HighscoreDAO;
+import com.tinyappli.troelslund.galgeleg.data.DAO.WordListDAO;
 import com.tinyappli.troelslund.galgeleg.data.DTO.HighscoreDTO;
 import com.tinyappli.troelslund.galgeleg.R;
 import com.tinyappli.troelslund.galgeleg.data.Data;
@@ -30,7 +31,6 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
     public TextView Showord;
     public String synligtord;
     public ImageView img;
-    public Data data;
     public TextView liv;
 
 
@@ -43,7 +43,6 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_game);
 
         logik = Galgelogik.getInstance();
-        data = new Data();
 
         img = (ImageView) findViewById(R.id.imageView);
 
@@ -83,6 +82,7 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
 
             case R.id.menu:
+                logik.nulstil();
                 Intent myIntent = new Intent(gameActivity.this, MainActivity.class);
                 gameActivity.this.startActivity(myIntent);
                 break;
@@ -208,5 +208,8 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
     return "";
     }
 
-    }
+
+
+
+}
 
