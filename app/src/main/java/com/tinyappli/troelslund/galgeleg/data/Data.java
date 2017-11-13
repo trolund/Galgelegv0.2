@@ -47,7 +47,9 @@ public class Data extends AsyncTask<String,String, List<String>> {
             wordList = load();
             if (wordList == null || wordList.size() < 1){
                 wordList = new ArrayList<String>();
-                wordList.add("Ord");
+                wordList.add("dtu");
+                logik.setMuligeOrd(wordList);
+                logik.nulstil();
                 Toast toast = Toast.makeText(context, "Der er ingen ord i hukommelsen, og kan ikke hente fra " + URL, Toast.LENGTH_SHORT);
                 toast.show();
             } else{
@@ -86,7 +88,7 @@ public class Data extends AsyncTask<String,String, List<String>> {
 
             if (wordList == null || wordList.size() < 1){
                 wordList = new ArrayList<String>();
-                wordList.add("Ord");
+                wordList.add("Dtu");
                 Toast toast = Toast.makeText(context, "Der er ingen ord i hukommelsen, og kan ikke hente fra " + URL, Toast.LENGTH_SHORT);
                 toast.show();
             }
@@ -98,8 +100,6 @@ public class Data extends AsyncTask<String,String, List<String>> {
             toast2.show();
         }
             logik.setMuligeOrd(wordList);
-            System.out.print("færdig med at hente data. fra URL: " + URL);
-
             logik.nulstil();
             System.out.println("Ordet:" + logik.getOrdet());
     }
@@ -133,8 +133,6 @@ public class Data extends AsyncTask<String,String, List<String>> {
         }.getType();
 
         wordList = gson.fromJson(json, type);
-
-        System.out.printf(wordList.toString());
 
         return wordList;
     }
