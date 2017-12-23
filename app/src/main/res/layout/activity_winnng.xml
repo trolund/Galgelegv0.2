@@ -2,33 +2,39 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/WinCon"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wingradiant"
     tools:context="com.tinyappli.troelslund.galgeleg.Activitys.WinningActivity">
 
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <Button
         android:id="@+id/restarte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
         android:layout_marginStart="30dp"
         android:text="Spil igen"
         app:layout_constraintBottom_toTopOf="@+id/highscore"
         app:layout_constraintStart_toStartOf="@+id/highscore"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:layout_marginLeft="30dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="77dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginStart="30dp"
         android:text="Menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/highscore"
-        app:layout_constraintTop_toBottomOf="@+id/highscore"
-        android:layout_marginLeft="30dp" />
+        app:layout_constraintTop_toBottomOf="@+id/highscore" />
 
     <TextView
         android:id="@+id/textView3"

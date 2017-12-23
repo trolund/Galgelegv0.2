@@ -1,6 +1,8 @@
 package com.tinyappli.troelslund.galgeleg.Activitys;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +11,10 @@ import android.widget.TextView;
 
 import com.tinyappli.troelslund.galgeleg.Logik.Galgelogik;
 import com.tinyappli.troelslund.galgeleg.R;
+
+import nl.dionsegijn.konfetti.KonfettiView;
+import nl.dionsegijn.konfetti.models.Shape;
+import nl.dionsegijn.konfetti.models.Size;
 
 public class LoseActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,6 +36,14 @@ public class LoseActivity extends AppCompatActivity implements View.OnClickListe
 
         restart = findViewById(R.id.restart);
         restart.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.losing);
+        mp.start();
     }
 
     @Override
