@@ -88,7 +88,7 @@ public class Data extends AsyncTask<String,String, List<String>> {
 
             if (wordList == null || wordList.size() < 1){
                 wordList = new ArrayList<String>();
-                wordList.add("Dtu");
+                wordList.add("Danmark");
                 Toast toast = Toast.makeText(context, "Der er ingen ord i hukommelsen, og kan ikke hente fra " + URL, Toast.LENGTH_SHORT);
                 toast.show();
             }

@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
 
             case R.id.StartGame:
-                Intent myIntent = new Intent(MainActivity.this, gameActivity.class);
+                Intent myIntent = new Intent(MainActivity.this, GameTypeActivity.class);
                 MainActivity.this.startActivity(myIntent);
                 break;
 

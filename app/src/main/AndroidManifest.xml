@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,8 +30,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activitys.highscores" />
         <activity android:name=".Activitys.WinningActivity" />
-        <activity android:name=".Activitys.LoseActivity"></activity>
-
+        <activity android:name=".Activitys.LoseActivity" />
+        <activity android:name=".Activitys.GameTypeActivity" />
+        <activity android:name=".Activitys.WordListActivity"></activity>
     </application>
 
 </manifest>
