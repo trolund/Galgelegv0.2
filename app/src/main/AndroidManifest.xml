@@ -32,7 +32,8 @@
         <activity android:name=".Activitys.WinningActivity" />
         <activity android:name=".Activitys.LoseActivity" />
         <activity android:name=".Activitys.GameTypeActivity" />
-        <activity android:name=".Activitys.WordListActivity"></activity>
+        <activity android:name=".Activitys.WordListActivity" />
+        <activity android:name=".Activitys.OwnWordActivity"></activity>
     </application>
 
 </manifest>

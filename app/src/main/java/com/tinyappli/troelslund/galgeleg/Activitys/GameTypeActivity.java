@@ -40,7 +40,7 @@ public class GameTypeActivity extends AppCompatActivity implements View.OnClickL
                 GameTypeActivity.this.startActivity(myIntent);
                 break;
             case R.id.ownWord_but:
-                Intent myIntent2 = new Intent(GameTypeActivity.this, WordListActivity.class);
+                Intent myIntent2 = new Intent(GameTypeActivity.this, OwnWordActivity.class);
                 GameTypeActivity.this.startActivity(myIntent2);
                 break;
             case R.id.listWord_but:

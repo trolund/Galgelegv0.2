@@ -7,6 +7,8 @@
     tools:context="com.tinyappli.troelslund.galgeleg.Activitys.gameActivity"
     tools:layout_editor_absoluteY="81dp">
 
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"

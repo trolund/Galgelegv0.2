@@ -3,10 +3,15 @@ package com.tinyappli.troelslund.galgeleg.Activitys;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.tinyappli.troelslund.galgeleg.Logik.Galgelogik;
 import com.tinyappli.troelslund.galgeleg.R;
@@ -21,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public Button helpBut;
     private Data data;
     private Galgelogik logik;
+
+    private ImageView img;
 
     private int nyStatus;
 
@@ -85,5 +92,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
+
+
+    private void setIMGAni(int x){
+        switch (x) {
+            case 0:
+                img.setImageResource(R.drawable.galge);
+                break;
+            case 1:
+                img.setImageResource(R.drawable.forkert1);
+                break;
+
+            case 2:
+                img.setImageResource(R.drawable.forkert2);
+                break;
+
+            case 3:
+                img.setImageResource(R.drawable.forkert3);
+                break;
+
+            case 4:
+                img.setImageResource(R.drawable.forkert4);
+                break;
+
+            case 5:
+                img.setImageResource(R.drawable.forkert5);
+                break;
+
+            case 6:
+                img.setImageResource(R.drawable.forkert6);
+                break;
+        }
+    }
+
 }
 

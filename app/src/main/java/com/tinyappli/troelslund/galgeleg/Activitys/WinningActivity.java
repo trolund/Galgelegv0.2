@@ -69,7 +69,7 @@ public class WinningActivity extends AppCompatActivity implements View.OnClickLi
         mp.start();
 
         konfettiView.build()
-                .addColors(Color.YELLOW, Color.RED)
+                .addColors(Color.YELLOW, Color.WHITE)
                 .setDirection(0.0, 359.0)
                 .setSpeed(1f, 5f)
                 .setFadeOutEnabled(true)

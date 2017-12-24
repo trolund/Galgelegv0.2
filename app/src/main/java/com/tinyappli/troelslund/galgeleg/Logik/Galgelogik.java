@@ -1,5 +1,10 @@
 package com.tinyappli.troelslund.galgeleg.Logik;
 
+import android.graphics.Color;
+import android.media.MediaPlayer;
+
+import com.tinyappli.troelslund.galgeleg.R;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,6 +14,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+
+import nl.dionsegijn.konfetti.KonfettiView;
+import nl.dionsegijn.konfetti.models.Shape;
+import nl.dionsegijn.konfetti.models.Size;
 
 public class Galgelogik {
 
@@ -176,9 +185,12 @@ public class Galgelogik {
     nulstil();
   }
 
-
   public static Galgelogik getInstance( ) {
     return singleton;
   }
 
+  public int setOrd(String ord){
+    this.muligeOrd.add(ord);
+    return this.muligeOrd.indexOf(ord);
+  }
 }

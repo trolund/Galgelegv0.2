@@ -1,6 +1,9 @@
 package com.tinyappli.troelslund.galgeleg.Activitys;
 
 import android.content.Intent;
+import android.graphics.drawable.TransitionDrawable;
+import android.media.MediaPlayer;
+import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -97,6 +100,15 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
                 setIMG();
                 view.setEnabled(false);
 
+                if (logik.erSidsteBogstavKorrekt()){
+                    MediaPlayer mp = MediaPlayer.create(this, R.raw.winning);
+                    mp.start();
+                }
+                else{
+                    MediaPlayer mp = MediaPlayer.create(this, R.raw.losing);
+                    mp.start();
+                }
+
 
                 if (logik.getAntalForkerteBogstaver() == 6){
                     time.stop();
@@ -119,6 +131,7 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
         }
+
     }
 
     private void setIMG(){
@@ -204,6 +217,8 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
 
     return "";
     }
+
+
 
 
 
