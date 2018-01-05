@@ -88,7 +88,7 @@ public class WinningActivity extends AppCompatActivity implements View.OnClickLi
 
             case R.id.restarte:
                 logik.nulstil();
-                Intent myIntent = new Intent(WinningActivity.this, gameActivity.class);
+                Intent myIntent = new Intent(WinningActivity.this, GameTypeActivity.class);
                 WinningActivity.this.startActivity(myIntent);
                 break;
 

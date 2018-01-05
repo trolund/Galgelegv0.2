@@ -49,7 +49,7 @@ public class LoseActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         logik.nulstil();
-        Intent myIntent = new Intent(LoseActivity.this, gameActivity.class);
+        Intent myIntent = new Intent(LoseActivity.this, GameTypeActivity.class);
         LoseActivity.this.startActivity(myIntent);
 
     }

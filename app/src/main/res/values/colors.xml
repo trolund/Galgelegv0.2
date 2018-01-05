@@ -4,6 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ff4081</color>
     <color name="Orag">#ff9d00</color>
-
+    <color name="blueys">#99d6ff</color>
     <color name="black_overlay">#66000000</color>
 </resources>
