@@ -56,6 +56,7 @@ public class WinningActivity extends AppCompatActivity implements View.OnClickLi
         Menu.setOnClickListener(this);
         hightscore.setOnClickListener(this);
 
+        getSupportActionBar().setTitle("Vinder!");
 
     }
 

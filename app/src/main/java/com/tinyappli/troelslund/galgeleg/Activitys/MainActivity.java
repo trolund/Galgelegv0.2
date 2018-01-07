@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         data = new Data(getBaseContext());
         data.start(nyStatus);
 
-
+        getSupportActionBar().setTitle("Menu");
     }
 
 

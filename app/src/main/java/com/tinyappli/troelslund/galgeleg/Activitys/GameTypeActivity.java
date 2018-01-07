@@ -30,6 +30,7 @@ public class GameTypeActivity extends AppCompatActivity implements View.OnClickL
         listWord.setOnClickListener(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Spil muligheder");
     }
 
     @Override

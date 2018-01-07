@@ -27,6 +27,7 @@ public class OwnWordActivity extends AppCompatActivity implements View.OnClickLi
         spilbut.setOnClickListener(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Eget ord");
     }
 
     @Override

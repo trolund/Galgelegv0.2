@@ -40,6 +40,7 @@ public class WordListActivity extends AppCompatActivity implements AdapterView.O
         view.setAdapter(adapter);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Vælg ord fra liste");
     }
 
     @Override

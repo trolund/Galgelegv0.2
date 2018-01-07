@@ -57,5 +57,6 @@ public class highscores extends AppCompatActivity {
         view.setAdapter(adapter);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Highscores");
     }
 }

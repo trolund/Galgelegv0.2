@@ -36,6 +36,8 @@ public class LoseActivity extends AppCompatActivity implements View.OnClickListe
 
         restart = findViewById(R.id.restart);
         restart.setOnClickListener(this);
+
+        getSupportActionBar().setTitle("Taber!");
     }
 
     @Override
