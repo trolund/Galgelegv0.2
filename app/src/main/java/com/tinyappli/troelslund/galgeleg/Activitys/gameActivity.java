@@ -68,6 +68,7 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
     @Override

@@ -38,6 +38,8 @@ public class WordListActivity extends AppCompatActivity implements AdapterView.O
         view.setOnItemClickListener(this);
 
         view.setAdapter(adapter);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

@@ -25,6 +25,8 @@ public class OwnWordActivity extends AppCompatActivity implements View.OnClickLi
 
         spilbut = findViewById(R.id.PlayOwnWord_but);
         spilbut.setOnClickListener(this);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

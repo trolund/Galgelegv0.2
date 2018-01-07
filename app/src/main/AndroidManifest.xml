@@ -19,21 +19,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activitys.gameActivity" />
+        <activity android:name=".Activitys.gameActivity"
+            android:parentActivityName=".Activitys.GameTypeActivity"/>
         <activity
             android:name=".Activitys.HelpActivity"
             android:label="@string/title_activity_help"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:parentActivityName=".Activitys.MainActivity" />
         <activity
             android:name=".Activitys.ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activitys.highscores" />
-        <activity android:name=".Activitys.WinningActivity" />
-        <activity android:name=".Activitys.LoseActivity" />
-        <activity android:name=".Activitys.GameTypeActivity" />
-        <activity android:name=".Activitys.WordListActivity" />
-        <activity android:name=".Activitys.OwnWordActivity"></activity>
+        <activity android:name=".Activitys.highscores"
+            android:parentActivityName=".Activitys.MainActivity"/>
+        <activity android:name=".Activitys.WinningActivity"
+            android:parentActivityName=".Activitys.GameTypeActivity"/>
+
+        <activity android:name=".Activitys.LoseActivity"
+            android:parentActivityName=".Activitys.GameTypeActivity"/>
+        <activity android:name=".Activitys.GameTypeActivity"
+            android:parentActivityName=".Activitys.MainActivity"
+            />
+        <activity android:name=".Activitys.WordListActivity"
+            android:parentActivityName=".Activitys.GameTypeActivity"
+            />
+        <activity android:name=".Activitys.OwnWordActivity"
+            android:parentActivityName=".Activitys.GameTypeActivity">
+        </activity>
     </application>
 
 </manifest>

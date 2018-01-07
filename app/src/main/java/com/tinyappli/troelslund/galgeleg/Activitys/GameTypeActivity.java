@@ -28,6 +28,8 @@ public class GameTypeActivity extends AppCompatActivity implements View.OnClickL
         randdom.setOnClickListener(this);
         ownWord.setOnClickListener(this);
         listWord.setOnClickListener(this);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

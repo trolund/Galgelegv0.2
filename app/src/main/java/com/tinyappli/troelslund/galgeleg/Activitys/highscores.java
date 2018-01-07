@@ -55,5 +55,7 @@ public class highscores extends AppCompatActivity {
         view = findViewById(R.id.listView);
 
         view.setAdapter(adapter);
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
