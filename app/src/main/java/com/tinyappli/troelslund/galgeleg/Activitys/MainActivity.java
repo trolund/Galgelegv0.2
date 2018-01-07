@@ -12,10 +12,16 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.MediaController;
 
 import com.tinyappli.troelslund.galgeleg.Logik.Galgelogik;
 import com.tinyappli.troelslund.galgeleg.R;
 import com.tinyappli.troelslund.galgeleg.data.Data;
+
+import java.io.IOException;
+
+import pl.droidsonroids.gif.GifDrawable;
+import pl.droidsonroids.gif.GifImageButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -64,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         data = new Data(getBaseContext());
         data.start(nyStatus);
+
+
     }
 
 

@@ -12,6 +12,7 @@ import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.plattysoft.leonids.ParticleSystem;
 import com.tinyappli.troelslund.galgeleg.Logik.Galgelogik;
 import com.tinyappli.troelslund.galgeleg.data.DAO.HighscoreDAO;
 import com.tinyappli.troelslund.galgeleg.data.DTO.HighscoreDTO;
@@ -104,6 +105,10 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
                 if (logik.erSidsteBogstavKorrekt()){
                     MediaPlayer mp = MediaPlayer.create(this, R.raw.winning);
                     mp.start();
+
+                    new ParticleSystem(this, 100, R.drawable.star_white, 800)
+                            .setSpeedRange(0.1f, 0.25f)
+                            .oneShot(view, 100);
                 }
                 else{
                     MediaPlayer mp = MediaPlayer.create(this, R.raw.losing);
