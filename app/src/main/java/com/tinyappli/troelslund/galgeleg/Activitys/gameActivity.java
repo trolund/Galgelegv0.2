@@ -120,12 +120,14 @@ public class gameActivity extends AppCompatActivity implements View.OnClickListe
                 if (logik.getAntalForkerteBogstaver() == 6){
                     time.stop();
                     deActivetABCBut();
+                    this.finish();
                     Intent losserIntent = new Intent(gameActivity.this, LoseActivity.class);
                     losserIntent.putExtra("ord", logik.getOrdet());
                     gameActivity.this.startActivity(losserIntent);
                 } else if(logik.erSpilletVundet()){
                     time.stop();
                     deActivetABCBut();
+                    this.finish();
                     Intent winnerIntent = new Intent(gameActivity.this, WinningActivity.class);
                     String Score = BeregnScore();
                     String Antalforsøg = "" + (logik.getAntalForkerteBogstaver() + logik.getOrdet().length());
